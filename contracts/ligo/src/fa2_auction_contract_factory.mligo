@@ -3,7 +3,12 @@ type user = {
   owner: address;
 }
 
-type parameters = {}
+type parameter =
+    RequestNewAuction of something
+  | BeginAuction of something
+  | MakeBid of something
+  | MakeFinalBid of something
+  | MakeFactoryOperator of something
 
 type auction = {}
 
