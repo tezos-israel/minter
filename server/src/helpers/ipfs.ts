@@ -11,7 +11,7 @@ export const ipfsConfig = {
 
 export async function uploadDataToIpfs(data: any) {
   const ipfsClient = IpfsClient(ipfsConfig.apiUrl);
-  const ipfsFile = await ipfsClient.add(data);
+  const ipfsFile = await ipfsClient.add(JSON.stringify(data));
   const cid = ipfsFile.cid.toString();
 
   return {
